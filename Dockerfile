@@ -1,4 +1,4 @@
-FROM debian:11
+FROM debian:12
 WORKDIR /app
 COPY . /app/
 RUN apt-get update -y && apt-get install default-jdk -y
