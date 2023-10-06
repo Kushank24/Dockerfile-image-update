@@ -1,5 +1,5 @@
 # Stage 1: Build the Java application
-FROM openjdk:11 AS build
+FROM openjdk:22-jdk-bookworm AS build
 
 WORKDIR /app
 
@@ -10,7 +10,7 @@ COPY ./src ./src
 RUN javac ./src/Main.java
 
 # Stage 2: Create a runtime image
-FROM openjdk:11-jre-slim
+FROM openjdk:22-jdk-bookworm
 
 WORKDIR /app
 
